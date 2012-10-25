@@ -5,7 +5,8 @@ HTDelegateProxy
 
 # Overview
 
-HTDelegateProxy is an NSProxy subclass that allows you to assign multiple delegates to a single source.
+HTDelegateProxy is an NSProxy subclass that allows you to assign multiple delegates to a single source. <br/>
+Check out the associated blog post at http://engineering.hoteltonight.com/handling-multiple-delegates-in-ios
 
 # Installation
 
