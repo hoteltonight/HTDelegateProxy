@@ -10,6 +10,9 @@ HTDelegateProxy is an NSProxy subclass that allows you to assign multiple delega
 # Installation
 
 ### Cocoapods users:
+Waiting on pull request to the cocoapods spec:
+https://github.com/CocoaPods/Specs/pull/664
+
 Add the following line to your Podfile: <br/>
 pod 'HTDelegateProxy', '~> 0.0.1'
 
