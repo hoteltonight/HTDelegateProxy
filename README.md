@@ -8,6 +8,13 @@ HTDelegateProxy
 HTDelegateProxy is an NSProxy subclass that allows you to assign multiple delegates to a single source. <br/>
 Check out the associated blog post at http://engineering.hoteltonight.com/handling-multiple-delegates-in-ios
 
+HTDelegateProxy operates on two simple rules:
+
+1. Messages with a void return type are sent to all target delegates
+2. Messages with non-void return types are send to the <i>first delegate in the list which responds to the selector.</i>
+
+This pattern seems to be effective in identifying which messages are informative (hey, something happened) and which messages are more complex interactions (how should I do this?).
+
 # Installation
 
 ### Cocoapods users:
