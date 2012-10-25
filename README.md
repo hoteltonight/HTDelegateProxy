@@ -1,3 +1,5 @@
+<img src="https://raw.github.com/hoteltonight/HTDelegateProxy/master/ht-logo-black.png" alt="HotelTonight" title="HotelTonight" style="display:block; margin: 10px auto 30px auto;">
+
 HTDelegateProxy
 ===============
 
