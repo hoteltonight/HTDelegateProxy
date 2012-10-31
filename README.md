@@ -18,11 +18,8 @@ This pattern seems to be effective in identifying which messages are informative
 # Installation
 
 ### Cocoapods users:
-Waiting on pull request to the cocoapods spec:
-https://github.com/CocoaPods/Specs/pull/664
-
 Add the following line to your Podfile: <br/>
-pod 'HTDelegateProxy', '~> 0.0.1'
+pod 'HTDelegateProxy', '~> 0.0.2'
 
 ### Everyone else:
 Add the HTDelegateProxy.m/h files to your project.
