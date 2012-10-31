@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "HTDelegateProxy"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "A class that allows you to assign multiple delegates."
   s.homepage     = "https://github.com/hoteltonight/HTDelegateProxy"
   s.license      = 'MIT'
