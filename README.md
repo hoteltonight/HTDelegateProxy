@@ -10,8 +10,8 @@ Check out the associated blog post at http://engineering.hoteltonight.com/handli
 
 HTDelegateProxy operates on two simple rules:
 
-1. Messages with a void return type are sent to all target delegates
-2. Messages with non-void return types are send to the <i>first delegate in the list which responds to the selector.</i>
+1. Messages with a void return type are sent to all target delegates that reponds to the selector
+2. Messages with non-void return types are sent only to the <i>first</i> delegate in the list that responds to the selector.
 
 This pattern seems to be effective in identifying which messages are informative (hey, something happened) and which messages are more complex interactions (how should I do this?).
 
