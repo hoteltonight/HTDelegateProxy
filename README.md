@@ -45,5 +45,6 @@ For example, you may assign multiple delegates to a UIScrollView by using HTDele
     self.scrollView.delegate = (id)self.delegateProxy;
     ...
 
+# Discussion
 
-    
+The `-[HTDelegateProxy delegates]` property is intentionally mutable in order to enforce the good practice of setting an object's delegate property at the same time that the HTDelegateProxy instance is initialized.  The reason for this is that many `setDelegate:` implementations (UIScrollView, for example) will call `respondsToSelector:` on the delegate in advance, as opposed to when the message is about to be sent (to optimize performance).  When this happens, a message will only be sent to instance of HTDelegateProxy if that message is passes `respondesToSelector:`, 
