@@ -27,6 +27,8 @@ Add the HTDelegateProxy.m/h files to your project.
 # Usage
 
 Delegates are not retained, so you have to maintain a strong reference to your HTDelegateProxy instance. <br/>
+
+For example, you may assign multiple delegates to a UIScrollView by using HTDelegateProxy as follows:
 ### In your interface: <br/>
     
     #import "HTDelegateProxy.h"
@@ -39,8 +41,7 @@ Delegates are not retained, so you have to maintain a strong reference to your H
 
     ...
     self.scrollView = [[UIScrollView alloc] init];
-    self.delegateProxy = [[HTDelegateProxy alloc] init];
-    self.delegateProxy.delegates = @[firstDelegate, secondDelegate];
+    self.delegateProxy = [[HTDelegateProxy alloc] initWithDelegates:@[firstDelegate, secondDelegate]];
     self.scrollView.delegate = (id)self.delegateProxy;
     ...
 
