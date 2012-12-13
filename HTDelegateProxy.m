@@ -66,6 +66,11 @@
     {
         if ([delegate respondsToSelector:aSelector])
         {
+            if ([delegate isKindOfClass:[UITextField class]]
+                && [[UITextField class] instancesRespondToSelector:aSelector])
+            {
+                continue;
+            }
             return YES;
         }
     }
