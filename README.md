@@ -51,6 +51,10 @@ The HTDelegateProxy class is intentionally immutable in order to enforce the goo
 
 ## Use it? Love/hate it?
 
-Tweet the authors @jakejennings and @sibljon, and check out HotelTonight's engineering blog: http://engineering.hoteltonight.com
+Tweet the authors @jakejennings and @jonsibs, and check out HotelTonight's engineering blog: http://engineering.hoteltonight.com
 
-
+Also, check out HotelTonight's other iOS open source:
+* https://github.com/hoteltonight/HTAutocompleteTextField
+* https://github.com/hoteltonight/HTGradientEasing
+* https://github.com/hoteltonight/HTStateAwareRasterImageView
+* https://github.com/hoteltonight/HTDelegateProxy
