@@ -47,4 +47,10 @@ For example, you may assign multiple delegates to a UIScrollView by using HTDele
 
 # Discussion
 
-The HTDelegateProxy class is intentionally immutable in order to enforce the good practice of setting an object's delegate property at the same time that the HTDelegateProxy instance is initialized.  The reason for this is that many `setDelegate:` implementations (UIScrollView, for example) will call `respondsToSelector:` on the delegate in advance, as opposed to when the message is about to be sent (to optimize performance).  When this happens, a message will only be sent to instance of HTDelegateProxy if that message is passes `respondesToSelector:`, 
+The HTDelegateProxy class is intentionally immutable in order to enforce the good practice of setting an object's delegate property at the same time that the HTDelegateProxy instance is initialized.  The reason for this is that many `setDelegate:` implementations (UIScrollView, for example) will call `respondsToSelector:` on the delegate in advance, as opposed to when the message is about to be sent (to optimize performance).  When this happens, a message will only be sent to instance of HTDelegateProxy if that message is passes `respondesToSelector:`.
+
+## Use it? Love/hate it?
+
+Tweet the authors @jakejennings and @sibljon, and check out HotelTonight's engineering blog: http://engineering.hoteltonight.com
+
+
