@@ -21,6 +21,12 @@
 
 @synthesize delegates = _delegates;
 
+- (id)initWithDelegates:(NSArray *)delegates
+{
+    [self setDelegates:delegates];
+    return self;
+}
+
 - (id)init
 {
     return self;

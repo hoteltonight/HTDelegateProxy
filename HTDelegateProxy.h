@@ -22,8 +22,9 @@
 
 @interface HTDelegateProxy : NSProxy
 
-@property (nonatomic, readonly) NSArray *delegates;
+@property (nonatomic, strong) NSArray *delegates;
 
 - (id)initWithDelegates:(NSArray *)delegates;
+- (id)init;
 
 @end
