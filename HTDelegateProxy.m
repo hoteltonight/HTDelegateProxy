@@ -21,18 +21,17 @@
 
 @synthesize delegates = _delegates;
 
-- (id)initWithDelegates:(NSArray *)delegates
+- (id)init
 {
-    [self setDelegates:delegates];
-
     return self;
 }
 
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)selector
 {
     NSMethodSignature *signature;
-    for (id delegate in self.delegates)
+    for (NSValue *nonRetainedValue in _delegates)
     {
+        id delegate = [nonRetainedValue nonretainedObjectValue];
         signature = [[delegate class] instanceMethodSignatureForSelector:selector];
         if (signature)
         {
@@ -47,8 +46,9 @@
     NSString *returnType = [NSString stringWithCString:invocation.methodSignature.methodReturnType encoding:NSUTF8StringEncoding];
     BOOL voidReturnType = [returnType isEqualToString:@"v"];
     
-    for (id delegate in self.delegates)
+    for (NSValue *nonRetainedValue in _delegates)
     {
+        id delegate = [nonRetainedValue nonretainedObjectValue];
         if ([delegate respondsToSelector:invocation.selector])
         {
             [invocation invokeWithTarget:delegate];
@@ -62,10 +62,16 @@
 
 - (BOOL)respondsToSelector:(SEL)aSelector
 {
-    for (id delegate in self.delegates)
+    for (NSValue *nonRetainedValue in _delegates)
     {
+        id delegate = [nonRetainedValue nonretainedObjectValue];
         if ([delegate respondsToSelector:aSelector])
         {
+            if ([delegate isKindOfClass:[UITextField class]]
+                && [[UITextField class] instancesRespondToSelector:aSelector])
+            {
+                continue;
+            }
             return YES;
         }
     }
