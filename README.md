@@ -17,7 +17,7 @@ This pattern seems to be effective in identifying which messages are informative
 
 # Installation
 
-### Cocoapods users:
+### CocoaPods users:
 Add the following line to your Podfile: <br/>
 pod 'HTDelegateProxy', '~> 0.0.2'
 
